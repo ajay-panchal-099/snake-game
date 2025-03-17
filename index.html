@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokia Snake Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #gameCanvas {
+            border: 8px solid #222222;
+            border-radius: 8px;
+            background-color: #9EAD86; /* Nokia LCD green color */
+        }
+        body {
+            background-color: #333333;
+        }
+        .nokia-frame {
+            border: 12px solid #222222;
+            border-radius: 16px;
+            background-color: #222222;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        .nokia-title {
+            font-family: 'Courier New', monospace;
+            color: #9EAD86;
+            text-shadow: none;
+        }
+        .nokia-score {
+            background-color: #9EAD86;
+            color: #222222;
+            font-family: 'Courier New', monospace;
+            border: 2px solid #222222;
+        }
+        .nokia-footer {
+            font-family: 'Courier New', monospace;
+            color: #9EAD86;
+            font-size: 0.75rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center">
+    <div class="nokia-frame max-w-md flex flex-col items-center">
+        <h1 class="nokia-title text-2xl font-bold mb-4 text-center w-full">NOKIA SNAKE</h1>
+        <div class="flex justify-center items-center space-x-4 mb-2 w-full">
+            <div class="nokia-score p-1 px-2 rounded">
+                <span class="font-bold">Score:</span>
+                <span id="score" class="font-bold">0</span>
+            </div>
+            <div class="nokia-score p-1 px-2 rounded">
+                <span class="font-bold">High-Score:</span>
+                <span id="highScore" class="font-bold">0</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" class="w-full"></canvas>
+        <div class="nokia-footer w-full">
+            Developed by Ajay Kumar using Claude AI
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
